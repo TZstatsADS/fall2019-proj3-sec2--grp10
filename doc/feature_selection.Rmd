@@ -1,0 +1,102 @@
+---
+title: "feature selection"
+output: html_document
+---
+
+```{r message=FALSE}
+if(!require("EBImage")){
+  source("https://bioconductor.org/biocLite.R")
+  biocLite("EBImage")
+}
+if(!require("R.matlab")){
+  install.packages("R.matlab")
+}
+if(!require("readxl")){
+  install.packages("readxl")
+}
+
+if(!require("dplyr")){
+  install.packages("dplyr")
+}
+if(!require("readxl")){
+  install.packages("readxl")
+}
+
+if(!require("ggplot2")){
+  install.packages("ggplot2")
+}
+
+if(!require("caret")){
+  install.packages("caret")
+}
+
+library(R.matlab)
+library(readxl)
+library(dplyr)
+library(EBImage)
+library(ggplot2)
+library(caret)
+library(mlbench)
+set.seed(0)
+setwd("~/Desktop/Project3-FacialEmotionRecognition/doc")
+```
+
+```{r}
+train_dir <-  "../data/train_set/" # This will be modified for different data sets.
+train_image_dir <- paste(train_dir, "images/", sep="")
+train_pt_dir <- paste(train_dir,  "points/", sep="")
+train_label_path <- paste(train_dir, "label.csv", sep="") 
+run.feature.train=TRUE # process features for training set
+run.test=TRUE # run evaluation on an independent test set
+run.feature.test=TRUE # process features for test set
+```
+
+```{r}
+#train-test split
+set.seed(0)
+info <- read.csv(train_label_path)
+n <- nrow(info)
+n_train <- round(n*(4/5), 0)
+train_idx <- sample(info$Index, n_train, replace = F)
+test_idx <- setdiff(info$Index,train_idx)
+```
+
+```{r}
+n_files <- length(list.files(train_image_dir))
+load("../output/fiducial_pt_list.RData")
+source("../lib/feature.R")
+# load the data
+tm_feature_train <- NA
+if(run.feature.train){
+  tm_feature_train <- system.time(dat_train <- feature(fiducial_pt_list, train_idx))
+}
+
+tm_feature_test <- NA
+if(run.feature.test){
+  tm_feature_test <- system.time(dat_test <- feature(fiducial_pt_list, test_idx))
+}
+
+```
+
+rfe method
+```{r}
+# define the control using a random forest selection function
+control <- rfeControl(functions=rfFuncs, method="cv", number=10)
+# run the RFE algorithm
+tm_feature_selection <- system.time(results <- rfe(dat_train1[,-6007], dat_train1[,6007],size = c(1:20),rfeControl=control))
+save(results, file="../output/feature_selection.RData")
+```
+
+2nd method:find the variable importance
+train the desired model using caret package
+Then, use varImp() to determine the feature importances.
+```{r}
+set.seed(0)
+#40 min
+rPartMod <- train(emotion_idx ~ ., data=dat_train1, method="rpart")
+rpartImp <- varImp(rPartMod)
+rpartImp
+save(rpartImp,file = "../output/feature_selection2.RData")
+#first five same as rfe
+
+```
