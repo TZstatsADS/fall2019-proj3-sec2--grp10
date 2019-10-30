@@ -6,13 +6,13 @@
 
 Term: Fall 2019
 
-+ Team ##
++ Team 10
 + Team members
-	+ team member 1
-	+ team member 2
-	+ team member 3
-	+ team member 4
-	+ team member 5
+	+ Yang, Siyu sy2796
+	+ Zhang, Qingyu qz2351
+	+ Xu, Yizhen yx2470
+	+ Jin, Jie jj2972
+	+ Huang, Yian yh3127
 
 + Project summary: In this project, we created a classification engine for facial emotion recognition. 
 	
