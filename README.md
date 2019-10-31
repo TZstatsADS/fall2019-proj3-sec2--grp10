@@ -17,6 +17,7 @@ Term: Fall 2019
 + Project summary: In this project, we created a classification engine for facial emotion recognition. 
 	
 **Contribution statement**: 
+
 Overall steps discussion : Siyu Yang, Qingyu Zhang, Yizhen Xu, Jie Jin, Yian Huang
 
 gbm model : Qingyu Zhang
