@@ -25,12 +25,6 @@ gbm model : Qingyu Zhang
 
 random forest model: Yizhen Xu
 
-KNN: Siyu Yang
-
-xgboost: Yian Huang
-
-svm: Jie Jin
-
 cross validation of gbm and random forest: Yizhen Xu, Qingyu Zhang, Siyu Yang
 
 code intregration: Siyu Yang
