@@ -27,6 +27,8 @@ random forest model: Yizhen Xu
 
 cross validation of gbm and random forest: Yizhen Xu, Qingyu Zhang, Siyu Yang
 
+feature selection: Siyu Yang
+
 code intregration: Siyu Yang
 
 presentation: Siyu Yang
