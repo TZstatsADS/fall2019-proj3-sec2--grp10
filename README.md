@@ -27,6 +27,8 @@ gbm model : Qingyu Zhang
 
 random forest model: Yizhen Xu
 
+xgboost model: Yian Huang
+
 cross validation of gbm and random forest: Yizhen Xu, Qingyu Zhang, Siyu Yang
 
 code integration: Siyu Yang
