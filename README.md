@@ -14,8 +14,13 @@ Term: Fall 2019
 	+ Jin, Jie jj2972
 	+ Huang, Yian yh3127
 
-+ Project summary: In this project, we created a classification engine for facial emotion recognition. 
-	
++ Project summary: In this project, we created a classification engine for facial emotion recognition. The original data set consists of 7 simple emotions and 15 complex emotions for classification. The train data set contains 2000 elememts with 6007 features. 6006 of the features indicate the distance between different fiducial points. The 6007th feature is the numeric labels feature, where the different facial expression are represented by the 1:22. The test data set contains 500 elements with 6007 features.
+
+Our group process the feature selection with Rfe method and train set method.
+
+Our group decides to fit gbm, random forest, xgboost models and select the model with best performance. The baseline gbm model turns to have accuracy rate: 43.8%. Our group improve the accuracy performance with the random forest model and fit the random forest model with 600 trees. The accuracy for the random forest model is 46.6%. The xgboost model evidently underperformed the baseline model. Therefore, our group select the random forest model as the improved model. 
+
+
 **Contribution statement**: 
 
 
