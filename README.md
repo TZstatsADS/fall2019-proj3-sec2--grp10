@@ -27,7 +27,7 @@ gbm model : Qingyu Zhang
 
 random forest model: Yizhen Xu
 
-xgboost model: Yian Huang
+xgboost model & cross validation: Yian Huang
 
 cross validation of gbm and random forest: Yizhen Xu, Qingyu Zhang, Siyu Yang
 
