@@ -18,6 +18,7 @@ Term: Fall 2019
 	
 **Contribution statement**: 
 
+
 Overall steps discussion : Siyu Yang, Qingyu Zhang, Yizhen Xu, Jie Jin, Yian Huang
 
 gbm model : Qingyu Zhang
