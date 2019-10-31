@@ -19,7 +19,9 @@ Term: Fall 2019
 **Contribution statement**: 
 
 
-Overall steps discussion : Siyu Yang, Qingyu Zhang, Yizhen Xu, Jie Jin, Yian Huang
+overall steps discussion : Siyu Yang, Qingyu Zhang, Yizhen Xu, Jie Jin, Yian Huang
+
+feature selection: Siyu Yang
 
 gbm model : Qingyu Zhang
 
@@ -27,9 +29,7 @@ random forest model: Yizhen Xu
 
 cross validation of gbm and random forest: Yizhen Xu, Qingyu Zhang, Siyu Yang
 
-feature selection: Siyu Yang
-
-code intregration: Siyu Yang
+code integration: Siyu Yang
 
 presentation: Siyu Yang
 
