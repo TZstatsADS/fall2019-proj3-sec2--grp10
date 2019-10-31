@@ -18,13 +18,21 @@ Term: Fall 2019
 	
 **Contribution statement**: 
 Overall steps discussion : Siyu Yang, Qingyu Zhang, Yizhen Xu, Jie Jin, Yian Huang
+
 gbm model : Qingyu Zhang
+
 random forest model: Yizhen Xu
+
 KNN: Siyu Yang
+
 xgboost: Yian Huang
+
 svm: Jie Jin
+
 cross validation of gbm and random forest: Yizhen Xu, Qingyu Zhang, Siyu Yang
+
 code intregration: Siyu Yang
+
 presentation: Siyu Yang
 
 
