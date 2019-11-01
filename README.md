@@ -34,7 +34,7 @@ random forest model: Yizhen Xu
 
 xgboost model & cross validation: Yian Huang
 
-SVM model: Jie Jin
+SVM model & cross validation: Jie Jin
 
 cross validation of gbm and random forest: Yizhen Xu, Qingyu Zhang, Siyu Yang
 
